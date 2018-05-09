@@ -50,7 +50,7 @@ var Header = function (_Component) {
         null,
         _react2.default.createElement(
           'div',
-          null,
+          { className: 'logo' },
           'Logo'
         ),
         _react2.default.createElement(
