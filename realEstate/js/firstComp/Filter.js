@@ -11,7 +11,8 @@ export default class Filter extends Component {
 
   render () {
     return (
-      <section className="filter">
+      <div className="inside">
+      <section id="filter">
         <h4>Filter</h4>
         <select name="neighborhood" className="filters neighborhood">
           <option>Cleveland</option>
@@ -31,12 +32,15 @@ export default class Filter extends Component {
             <input type="text" name="max-price" className="max-price" />
         </div>
         <div className="filters floor-space">
-            <span className="title">Price</span>
+            <span className="title">Floor Space</span>
             <input type="text" name="min-floor-space" className="min-floor-space" />
             <input type="text" name="max-floor-space" className="max-floor-space" />
         </div>
 
         <div className="filters extras">
+            <span className="title">
+              Extras
+            </span>
             <label for="extras">
             <span>Elevators</span>
             <input name="extras" value="elevator" type="checkbox" />
@@ -48,7 +52,7 @@ export default class Filter extends Component {
             </label>
 
             <label for="extras">
-            <span>Finished Basement</span> 
+            <span>Finished Basement</span>
             <input name="extras" value="finished-basement" type="checkbox" />
             </label>
 
@@ -58,6 +62,7 @@ export default class Filter extends Component {
             </label>
         </div>
       </section>
+      </div>
     )
   }
 }

@@ -4,9 +4,13 @@
 
 
 
+
+*,
+html,
 body {
   font-family: 'Roboto', sans-serif;
-  // background: purple;
+  box-sizing: border-box;
 }
 
 @import "listings";
+@import "content-area";
