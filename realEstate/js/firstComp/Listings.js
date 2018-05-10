@@ -37,9 +37,12 @@ export default class Listings extends Component {
       <section className="listing-results">
         <div className="listing">
           <div className="listing-image">
-            <span className="address">Address</span>
+            <span className="address">24 Utopia Drive</span>
             <div className="details">
+              <div className="col-md-3">
                 <div className="user-image"></div>
+              </div>
+                <div className="col-md-9">
                   <div className="user-detail">
                     <span className="user-name">John Doe</span>
                     <span className="post-date">07/07/2017</span>
@@ -53,6 +56,10 @@ export default class Listings extends Component {
                       <span>2 bedrooms</span>
                     </div>
                   </div>
+                  <div className="view-btn">
+                      View Listing
+                  </div>
+                </div>
               </div>
           </div>
           <div className="bottom-info">
