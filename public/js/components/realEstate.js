@@ -413,86 +413,357 @@ var Listings = function (_Component) {
           { className: 'listing-results' },
           _react2.default.createElement(
             'div',
-            { className: 'listing' },
+            { className: 'col-md-3' },
             _react2.default.createElement(
               'div',
-              { className: 'listing-image' },
-              _react2.default.createElement(
-                'span',
-                { className: 'address' },
-                '24 Utopia Drive'
-              ),
+              { className: 'listing' },
               _react2.default.createElement(
                 'div',
-                { className: 'details' },
+                { className: 'listing-image' },
                 _react2.default.createElement(
-                  'div',
-                  { className: 'col-md-3' },
-                  _react2.default.createElement('div', { className: 'user-image' })
+                  'span',
+                  { className: 'address' },
+                  '24 Utopia Drive'
                 ),
                 _react2.default.createElement(
                   'div',
-                  { className: 'col-md-9' },
+                  { className: 'details' },
                   _react2.default.createElement(
                     'div',
-                    { className: 'user-detail' },
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'user-name' },
-                      'John Doe'
-                    ),
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'post-date' },
-                      '07/07/2017'
-                    )
+                    { className: 'col-md-3' },
+                    _react2.default.createElement('div', { className: 'user-image' })
                   ),
                   _react2.default.createElement(
                     'div',
-                    { className: 'listing-details' },
+                    { className: 'col-md-9' },
                     _react2.default.createElement(
                       'div',
-                      { className: 'floor-space' },
-                      _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                      { className: 'user-detail' },
                       _react2.default.createElement(
                         'span',
-                        null,
-                        '1000 ft\xB2'
+                        { className: 'user-name' },
+                        'John Doe'
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'post-date' },
+                        '07/07/2017'
                       )
                     ),
                     _react2.default.createElement(
                       'div',
-                      { className: 'bedrooms' },
-                      _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                      { className: 'listing-details' },
                       _react2.default.createElement(
-                        'span',
-                        null,
-                        '2 bedrooms'
+                        'div',
+                        { className: 'floor-space' },
+                        _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '1000 ft\xB2'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'bedrooms' },
+                        _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '2 bedrooms'
+                        )
                       )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'view-btn' },
+                      'View Listing'
                     )
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'view-btn' },
-                    'View Listing'
                   )
                 )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'bottom-info' },
-              _react2.default.createElement(
-                'span',
-                null,
-                '$1000 / month'
               ),
               _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-map-marker',
-                  'aria-hidden': 'true' }),
-                ' Cleveland, OH'
+                'div',
+                { className: 'bottom-info' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'price' },
+                  '$1000 / month'
+                ),
+                _react2.default.createElement(
+                  'span',
+                  { className: 'location' },
+                  _react2.default.createElement('i', { className: 'fa fa-map-marker',
+                    'aria-hidden': 'true' }),
+                  ' Cleveland, OH'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-3' },
+            _react2.default.createElement(
+              'div',
+              { className: 'listing' },
+              _react2.default.createElement(
+                'div',
+                { className: 'listing-image' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'address' },
+                  '24 Utopia Drive'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'details' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-md-3' },
+                    _react2.default.createElement('div', { className: 'user-image' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-md-9' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'user-detail' },
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'user-name' },
+                        'John Doe'
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'post-date' },
+                        '07/07/2017'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'listing-details' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'floor-space' },
+                        _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '1000 ft\xB2'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'bedrooms' },
+                        _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '2 bedrooms'
+                        )
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'view-btn' },
+                      'View Listing'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'bottom-info' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'price' },
+                  '$1000 / month'
+                ),
+                _react2.default.createElement(
+                  'span',
+                  { className: 'location' },
+                  _react2.default.createElement('i', { className: 'fa fa-map-marker',
+                    'aria-hidden': 'true' }),
+                  ' Cleveland, OH'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-3' },
+            _react2.default.createElement(
+              'div',
+              { className: 'listing' },
+              _react2.default.createElement(
+                'div',
+                { className: 'listing-image' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'address' },
+                  '24 Utopia Drive'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'details' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-md-3' },
+                    _react2.default.createElement('div', { className: 'user-image' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-md-9' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'user-detail' },
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'user-name' },
+                        'John Doe'
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'post-date' },
+                        '07/07/2017'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'listing-details' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'floor-space' },
+                        _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '1000 ft\xB2'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'bedrooms' },
+                        _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '2 bedrooms'
+                        )
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'view-btn' },
+                      'View Listing'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'bottom-info' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'price' },
+                  '$1000 / month'
+                ),
+                _react2.default.createElement(
+                  'span',
+                  { className: 'location' },
+                  _react2.default.createElement('i', { className: 'fa fa-map-marker',
+                    'aria-hidden': 'true' }),
+                  ' Cleveland, OH'
+                )
+              )
+            )
+          ),
+          _react2.default.createElement(
+            'div',
+            { className: 'col-md-3' },
+            _react2.default.createElement(
+              'div',
+              { className: 'listing' },
+              _react2.default.createElement(
+                'div',
+                { className: 'listing-image' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'address' },
+                  '24 Utopia Drive'
+                ),
+                _react2.default.createElement(
+                  'div',
+                  { className: 'details' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-md-3' },
+                    _react2.default.createElement('div', { className: 'user-image' })
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'col-md-9' },
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'user-detail' },
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'user-name' },
+                        'John Doe'
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'post-date' },
+                        '07/07/2017'
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'listing-details' },
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'floor-space' },
+                        _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '1000 ft\xB2'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'bedrooms' },
+                        _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '2 bedrooms'
+                        )
+                      )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'view-btn' },
+                      'View Listing'
+                    )
+                  )
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'bottom-info' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'price' },
+                  '$1000 / month'
+                ),
+                _react2.default.createElement(
+                  'span',
+                  { className: 'location' },
+                  _react2.default.createElement('i', { className: 'fa fa-map-marker',
+                    'aria-hidden': 'true' }),
+                  ' Cleveland, OH'
+                )
               )
             )
           )
