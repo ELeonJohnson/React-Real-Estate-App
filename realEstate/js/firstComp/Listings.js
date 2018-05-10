@@ -17,7 +17,7 @@ export default class Listings extends Component {
       </section>
 
       <section className="sort-by">
-        <div>
+        <div className="results">
             300 results found
         </div>
 

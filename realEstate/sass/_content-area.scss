@@ -3,6 +3,8 @@
   width: 30%;
   max-width: 300px;
   padding: 10px;
+  display: inline-block;
+  float: left;
 
   .inside {
     max-width: 300px;
@@ -58,5 +60,52 @@
 }
 
 #listings {
-  
+  width: 70%;
+  float: left;
+  display: inline-block;
+  padding: 15px;
+  background: $offwhite;
+
+  .search-area {
+    input[type="text"] {
+      width: 70%;
+      background: transparent;
+      font-size: 2rem;
+      border: none;
+      border-bottom: 2px solid $lightgrey;
+      margin-bottom: 20px;
+      color: $lightgrey;
+    }
+  }
+
+  .sort-by {
+    margin-bottom: 20px;
+    .results {
+      color: $lightgrey;
+      font-size: .8rem;
+      display: inline-block;
+    }
+
+    .sort-options {
+      float: right;
+
+      select {
+        font-size: .9rem;
+        font-weight: 300;
+        border: 1px solid $lightgrey;
+        background: transparent;
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: top;
+      }
+      .view {
+        display: inline-block;
+
+        .fa {
+          margin-right: 15px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
 }

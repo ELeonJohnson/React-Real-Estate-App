@@ -380,7 +380,7 @@ var Listings = function (_Component) {
           { className: 'sort-by' },
           _react2.default.createElement(
             'div',
-            null,
+            { className: 'results' },
             '300 results found'
           ),
           _react2.default.createElement(
