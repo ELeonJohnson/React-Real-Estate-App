@@ -102,11 +102,15 @@ var App = function (_Component) {
       max_price: 100000000,
       min_floor_space: 0,
       max_floor_space: 50000,
-      swimming_pool: true,
-      finished_basement: true
+      elevator: false,
+      gym: false,
+      swimming_pool: false,
+      finished_basement: false,
+      filterData: _listingsData2.default
 
     };
     _this.change = _this.change.bind(_this);
+    _this.filterData = _this.filterData.bind(_this);
     return _this;
   }
 
@@ -119,6 +123,19 @@ var App = function (_Component) {
       var value = event.target.type === 'checkbox' ? event.target.checked : event.target.value;
       this.setState(_defineProperty({}, name, value), function () {
         console.log(_this2.state);
+        _this2.filterData();
+      });
+    }
+  }, {
+    key: 'filterData',
+    value: function filterData() {
+      var _this3 = this;
+
+      var newData = this.state.listingsData.filter(function (item) {
+        return item.price >= _this3.state.min_price && item.price <= _this3.state.max_price && item.floorSpace >= _this3.state.min_floor_space && item.floorSpace <= _this3.state.max_floor_space;
+      });
+      this.setState({
+        filterData: newData
       });
     }
   }, {
@@ -132,7 +149,7 @@ var App = function (_Component) {
           'section',
           { id: 'content-area' },
           _react2.default.createElement(_Filter2.default, { change: this.change, globalState: this.state }),
-          _react2.default.createElement(_Listings2.default, { listingsData: this.state.listingsData })
+          _react2.default.createElement(_Listings2.default, { listingsData: this.state.filterData })
         )
       );
     }
@@ -304,7 +321,7 @@ var Filter = function (_Component) {
                 null,
                 'Swimming Pool'
               ),
-              _react2.default.createElement('input', { name: 'swimming_pool', value: 'swimming-pool', type: 'checkbox', onChange: this.props.change })
+              _react2.default.createElement('input', { name: 'swimming_pool', value: 'swimming_pool', type: 'checkbox', onChange: this.props.change })
             ),
             _react2.default.createElement(
               'label',
@@ -314,7 +331,7 @@ var Filter = function (_Component) {
                 null,
                 'Finished Basement'
               ),
-              _react2.default.createElement('input', { name: 'finished_basement', value: 'finished-basement', type: 'checkbox', onChange: this.props.change })
+              _react2.default.createElement('input', { name: 'finished_basement', value: 'finished_basement', type: 'checkbox', onChange: this.props.change })
             ),
             _react2.default.createElement(
               'label',
@@ -471,6 +488,10 @@ var Listings = function (_Component) {
     value: function loopListings() {
       var listingsData = this.props.listingsData;
 
+
+      if (listingsData == undefined || listingsData.length == 0) {
+        return 'Sorry, your values did not match any listing';
+      }
 
       return listingsData.map(function (listing, index) {
         return _react2.default.createElement(
