@@ -153,10 +153,13 @@
       }
 
       .address {
+        font-size: 1.3rem;
+        text-transform: capitalize;
         position: absolute;
         bottom: 20px;
         opacity: 1;
         transition: all .4s ease-in-out;
+        text-shadow: 0px 1px 4px rgba(91, 91, 91, 1);
       }
 
       .details {
@@ -196,6 +199,7 @@
          .user-detail {
            display: inline-block;
            vertical-align: top;
+
 
 
            .user-name {
@@ -303,10 +307,11 @@
    width: 25%;
    display: inline-block;
    vertical-align: top;
-   padding: 0 15px
+   padding: 0 15px;
  }
 
  .col-md-9 {
    width: 75%;
    display: inline-block;
+
  }
