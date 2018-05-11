@@ -8,7 +8,7 @@ const VENDOR_LIBS = [
 
 module.exports = {
   entry: {
-    realEstate: './realEstate/js/firstComp/realEstate.js',
+    realEstate: './realEstate/assets/js/realEstate.js',
     //regularJS: './assets/js/regularJS.js',
     vendor: VENDOR_LIBS
   },
