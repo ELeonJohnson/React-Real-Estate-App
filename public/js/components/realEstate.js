@@ -172,7 +172,7 @@ var App = function (_Component) {
 
       //homeType
       var homeTypes = this.state.listingsData.map(function (item) {
-        return item.homeTypes;
+        return item.homeType;
       });
       homeTypes = new Set(homeTypes);
       homeTypes = [].concat(_toConsumableArray(homeTypes));
@@ -338,7 +338,7 @@ var Filter = function (_Component) {
             _react2.default.createElement(
               'option',
               { value: 'All' },
-              'All'
+              'All Cities'
             ),
             this.cities()
           ),

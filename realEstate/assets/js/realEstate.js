@@ -77,7 +77,7 @@ class App extends Component {
 
     //homeType
     var homeTypes = this.state.listingsData.map((item) => {
-      return item.homeTypes
+      return item.homeType
     })
     homeTypes = new Set(homeTypes)
     homeTypes = [...homeTypes]

@@ -59,12 +59,12 @@ if(this.props.globalState.populateFormsData.bedrooms != undefined) {
         <h4>Filter</h4>
         <label htmlFor="city">City</label>
         <select name="city" className="filters city" onChange={this.props.change}>
-          <option value="All">All</option>
+          <option value="All">All Cities</option>
           {this.cities()}
         </select>
 
-       <label htmlFor="homeType">Home Type</label>
-       <select name="homeType" className="filters homeType" onChange={this.props.change}>
+        <label htmlFor="homeType">Home Type</label>
+        <select name="homeType" className="filters homeType" onChange={this.props.change}>
           <option value="All">All Homes</option>
           {this.homeTypes()}
         </select>
@@ -79,6 +79,7 @@ if(this.props.globalState.populateFormsData.bedrooms != undefined) {
             <input type="text" name="min_price" className="min-price" onChange={this.props.change} value={this.props.globalState.min_price}/>
             <input type="text" name="max_price" className="max-price" onChange={this.props.change} value={this.props.globalState.max_price}/>
         </div>
+
         <div className="filters floor-space">
             <span className="title">Floor Space</span>
             <input type="text" name="min_floor_space" className="min-floor-space" onChange={this.props.change} value={this.props.globalState.min_floor_space}/>
