@@ -279,7 +279,9 @@
 }
 
 #pagination {
-    text-align: center;
+  width: 100%;
+  display: block;
+  text-align: center;
   .pages {
     display: inline-block;
     background: white;

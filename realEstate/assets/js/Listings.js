@@ -36,11 +36,11 @@ export default class Listings extends Component {
                         </div>
                         <div className="listing-details">
                           <div className="floor-space"><i className="fa fa-square-o" aria-hidden="true"></i>
-                          <span>1000 ft&sup2;</span>
+                          <span>{listing.floorSpace} ft&sup2;</span>
                           </div>
                           <div className="bedrooms">
                           <i className="fa fa-bed" aria-hidden="true"></i>
-                            <span>{listing.bedrooms} bedrooms</span>
+                            <span>{listing.rooms} bedrooms</span>
                           </div>
                         </div>
                         <div className="view-btn">
@@ -74,11 +74,11 @@ export default class Listings extends Component {
                         </div>
                         <div className="listing-details">
                           <div className="floor-space"><i className="fa fa-square-o" aria-hidden="true"></i>
-                          <span>1000 ft&sup2;</span>
+                          <span>{listing.floorSpace} ft&sup2;</span>
                           </div>
                           <div className="bedrooms">
                           <i className="fa fa-bed" aria-hidden="true"></i>
-                            <span>{listing.bedrooms} bedrooms</span>
+                            <span>{listing.rooms} bedrooms</span>
                           </div>
                         </div>
                         <div className="view-btn">
@@ -107,7 +107,7 @@ export default class Listings extends Component {
 
       <section className="sort-by">
         <div className="results">
-            300 results found
+            {this.props.globalState.filterData.length} results found
         </div>
 
         <div className="sort-options">
@@ -123,9 +123,11 @@ export default class Listings extends Component {
         </div>
       </section>
 
-      <section className="listing-results">
-      {this.loopListings()}
+    <section className="listing-results">
 
+    <div>
+      {this.loopListings()}
+    </div>
 
      </section>
 

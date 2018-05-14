@@ -25,7 +25,7 @@ class App extends Component {
       filterData: listingsData,
       populateFormsData: '',
       sortby: 'price-dsc',
-      view: 'box',
+      view: 'long',
       search: ''
     }
     this.change = this.change.bind(this)
