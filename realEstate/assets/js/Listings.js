@@ -18,42 +18,85 @@ export default class Listings extends Component {
     }
 
     return listingsData.map((listing, index) => {
-      return (<div className="col-md-3" key={index}>
-            <div className="listing">
-              <div className="listing-image" style={{background: `url("${listing.image}")
-                no-repeat center center`}}>
-                <span className="address">{listing.address}</span>
-                <div className="details">
-                  <div className="col-md-3">
-                    <div className="user-image"></div>
-                  </div>
-                    <div className="col-md-9">
-                      <div className="user-detail">
-                        <span className="user-name">John Doe</span>
-                        <span className="post-date">07/07/2017</span>
-                      </div>
-                      <div className="listing-details">
-                        <div className="floor-space"><i className="fa fa-square-o" aria-hidden="true"></i>
-                        <span>1000 ft&sup2;</span>
+      if(this.props.globalState.view == 'box') {
+        //Box View
+        return (<div className="col-md-3" key={index}>
+              <div className="listing">
+                <div className="listing-image" style={{background: `url("${listing.image}")
+                  no-repeat center center`}}>
+                  <span className="address">{listing.address}</span>
+                  <div className="details">
+                    <div className="col-md-3">
+                      <div className="user-image"></div>
+                    </div>
+                      <div className="col-md-9">
+                        <div className="user-detail">
+                          <span className="user-name">John Doe</span>
+                          <span className="post-date">07/07/2017</span>
                         </div>
-                        <div className="bedrooms">
-                        <i className="fa fa-bed" aria-hidden="true"></i>
-                          <span>{listing.bedrooms} bedrooms</span>
+                        <div className="listing-details">
+                          <div className="floor-space"><i className="fa fa-square-o" aria-hidden="true"></i>
+                          <span>1000 ft&sup2;</span>
+                          </div>
+                          <div className="bedrooms">
+                          <i className="fa fa-bed" aria-hidden="true"></i>
+                            <span>{listing.bedrooms} bedrooms</span>
+                          </div>
                         </div>
-                      </div>
-                      <div className="view-btn">
-                          View Listing
+                        <div className="view-btn">
+                            View Listing
+                        </div>
                       </div>
                     </div>
-                  </div>
+                </div>
+                <div className="bottom-info">
+                  <span className="price">{listing.price}</span>
+                  <span className="location"><i className="fa fa-map-marker"
+                  aria-hidden="true"></i> {listing.city}, {listing.state}</span>
+                </div>
               </div>
-              <div className="bottom-info">
-                <span className="price">{listing.price}</span>
-                <span className="location"><i className="fa fa-map-marker"
-                aria-hidden="true"></i> {listing.city}, {listing.state}</span>
+            </div>)
+      } else {
+        // Long View
+        return (<div className="col-md-12 col-lg-6" key={index}>
+              <div className="listing">
+                <div className="listing-image" style={{background: `url("${listing.image}")
+                  no-repeat center center`}}>
+                  <span className="address">{listing.address}</span>
+                  <div className="details">
+                    <div className="col-md-3">
+                      <div className="user-image"></div>
+                    </div>
+                      <div className="col-md-9">
+                        <div className="user-detail">
+                          <span className="user-name">John Doe</span>
+                          <span className="post-date">07/07/2017</span>
+                        </div>
+                        <div className="listing-details">
+                          <div className="floor-space"><i className="fa fa-square-o" aria-hidden="true"></i>
+                          <span>1000 ft&sup2;</span>
+                          </div>
+                          <div className="bedrooms">
+                          <i className="fa fa-bed" aria-hidden="true"></i>
+                            <span>{listing.bedrooms} bedrooms</span>
+                          </div>
+                        </div>
+                        <div className="view-btn">
+                            View Listing
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div className="bottom-info">
+                  <span className="price">{listing.price}</span>
+                  <span className="location"><i className="fa fa-map-marker"
+                  aria-hidden="true"></i> {listing.city}, {listing.state}</span>
+                </div>
               </div>
-            </div>
-          </div>)
+            </div>)
+      }
+
+
     })
   }
  render() {
@@ -74,8 +117,8 @@ export default class Listings extends Component {
           </select>
 
           <div className="view">
-            <i className="fa fa-th-list" aria-hidden="true"></i>
-            <i className="fa fa-th" aria-hidden="true"></i>
+            <i className="fa fa-th-list" aria-hidden="true" onClick={this.props.changeView.bind(null, 'long')}></i>
+            <i className="fa fa-th" aria-hidden="true" onClick={this.props.changeView.bind(null, 'box')}></i>
           </div>
         </div>
       </section>
