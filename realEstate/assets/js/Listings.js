@@ -102,7 +102,7 @@ export default class Listings extends Component {
  render() {
   return (<section id="listings">
       <section className="search-area">
-        <input type="text" className="search" />
+        <input type="text" className="search" onChange={this.props.change} />
       </section>
 
       <section className="sort-by">
